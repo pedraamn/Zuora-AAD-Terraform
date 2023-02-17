@@ -1,6 +1,5 @@
 #User groups (from csv)
 variable "azure_domain"{
-    required = true
 }
 variable "users_file_path"{}
 variable "managers_file_path"{}
