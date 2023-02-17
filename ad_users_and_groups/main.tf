@@ -1,4 +1,13 @@
 #User groups (from csv)
+variable "azure_domain"{}
+variable "users_file_path"{}
+variable "managers_file_path"{}
+variable "groups_file_path"{}
+variable "existing_groups_file_path"{}
+variable "sam_object_id"{}
+variable "pedraam_object_id"{}
+variable "dan_object_id"{}
+
 locals {
     users = csvdecode(file(var.users_file_path))
     groups = csvdecode(file("${var.groups_file_path}"))
