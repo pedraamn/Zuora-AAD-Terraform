@@ -1,12 +1,3 @@
-variable "azure_domain"{}
-variable "users_file_path"{}
-variable "managers_file_path"{}
-variable "groups_file_path"{}
-variable "existing_groups_file_path"{}
-variable "sam_object_id"{}
-variable "pedraam_object_id"{}
-variable "dan_object_id"{}
-
 module "app1" {
     source  = "./enterprise_app"
     azure_domain = var.azure_domain
