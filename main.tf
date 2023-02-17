@@ -1,3 +1,12 @@
+variable "azure_domain"{}
+variable "users_file_path"{}
+variable "managers_file_path"{}
+variable "groups_file_path"{}
+variable "existing_groups_file_path"{}
+variable "sam_object_id"{}
+variable "pedraam_object_id"{}
+variable "dan_object_id"{}
+
 module "app1" {
     source  = "./enterprise_app"
     azure_domain = var.azure_domain
@@ -42,4 +51,12 @@ module "app5" {
 
 module "ad_users_and_groups" {
     source  = "./ad_users_and_groups"
+    azure_domain = var.azure_domain
+    users_file_path = var.users_file_path
+    managers_file_path = var.managers_file_path
+    groups_file_path = var.groups_file_path
+    existing_groups_file_path = var.existing_groups_file_path
+    sam_object_id = var.sam_object_id
+    pedraam_object_id = var.pedraam_object_id
+    dan_object_id = var.dan_object_id
 }
