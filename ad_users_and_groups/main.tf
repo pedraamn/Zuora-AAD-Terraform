@@ -1,5 +1,7 @@
 #User groups (from csv)
-variable "azure_domain"{}
+variable "azure_domain"{
+    required = true
+}
 variable "users_file_path"{}
 variable "managers_file_path"{}
 variable "groups_file_path"{}
@@ -10,7 +12,9 @@ variable "dan_object_id"{}
 
 locals {
     users = csvdecode(file(var.users_file_path))
-    groups = csvdecode(file("${var.groups_file_path}"))
+    #groups = csvdecode(file("${var.groups_file_path}"))
+    groups = csvdecode(file("nonsense"))
+    #groups = csvdecode(file("/runner/_work/terraspace-infra/terraspace-infra/csvs/AzureCSVs/groups.csv"))
     existing_groups = csvdecode(file(var.existing_groups_file_path))
     managers = csvdecode(file(var.managers_file_path))
 
