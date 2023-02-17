@@ -7,11 +7,10 @@ variable "sam_object_id"{}
 variable "pedraam_object_id"{}
 variable "dan_object_id"{}
 
-
 #User groups (from csv)
 locals {
     users = csvdecode(file(var.users_file_path))
-    groups = csvdecode(file(var.groups_file_path))
+    groups = csvdecode(file("${var.groups_file_path}"))
     existing_groups = csvdecode(file(var.existing_groups_file_path))
     managers = csvdecode(file(var.managers_file_path))
 
