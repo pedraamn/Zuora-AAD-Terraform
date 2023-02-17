@@ -16,11 +16,6 @@ variable "users_file_path" {
   default     = ""
 }
 
-variable "groups_file_path" {
-  description = "groups file path"
-  type        = string
-}
-
 variable "existing_groups_file_path" {
   description = "existing groups file path"
   type        = string
