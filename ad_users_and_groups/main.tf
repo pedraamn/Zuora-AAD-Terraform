@@ -120,7 +120,7 @@ resource "azuread_group_member" "group_membership" {
   // look up object ids for groups and members
   member_object_id = split(" ", each.value)[0]
   group_object_id  = split(" ", each.value)[1]
-  depends_on          = [azuread_group.csv_group, azuread_urser.existing_users]
+  depends_on          = [azuread_group.csv_group, azuread_user.existing_users]
 }
 
 
