@@ -1,5 +1,3 @@
-variable "groups_file_path"{}
-
 module "app1" {
     source  = "./enterprise_app"
     azure_domain = var.azure_domain
