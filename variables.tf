@@ -19,7 +19,6 @@ variable "users_file_path" {
 variable "groups_file_path" {
   description = "groups file path"
   type        = string
-  default     = ""
 }
 
 variable "existing_groups_file_path" {
