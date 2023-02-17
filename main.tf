@@ -1,4 +1,4 @@
-
+variable "groups_file_path" {}
 
 module "app1" {
     source  = "./enterprise_app"
