@@ -110,8 +110,9 @@ output "testing1" {
 }
 // create groups_ids
 resource "azuread_group" "csv_group" {
-  for_each = {for group in local.groups : group.name => group}
-  display_name = each.value.name
+  #for_each = {for group in local.groups : group.name => group}
+  #display_name = each.value.name
+  display_name = "AWS-EKS-Privileged-ReadOnly"
   owners = [var.sam_object_id]
   security_enabled = true
 }
