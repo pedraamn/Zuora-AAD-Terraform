@@ -103,7 +103,7 @@ output "testing1" {
 resource "azuread_group" "csv_group" {
   for_each = {for group in local.groups : group.name => group}
   display_name = each.value.name
-  owners = [var.sam_object_id, var.pedraam_object_id, var.dan_object_id]
+  owners = [var.sam_object_id]
   security_enabled = true
 }
 
