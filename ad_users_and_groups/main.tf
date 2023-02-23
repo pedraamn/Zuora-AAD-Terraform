@@ -1,7 +1,7 @@
 locals {
     users = csvdecode(file(var.users_file_path))
-    #groups = csvdecode(file("${var.groups_file_path}"))
-    groups = csvdecode("name,bucket\nAWS-EKS-Privileged-ReadOnly,developer\nAWS-EKS-Privileged-Administrator-Dev,developer\nAWS-EKS-Privileged-Administrator-Prod,infrastructure\nTestingg97379,developer")
+    groups = csvdecode(file("${var.groups_file_path}"))
+    #groups = csvdecode("name,bucket\nAWS-EKS-Privileged-ReadOnly,developer\nAWS-EKS-Privileged-Administrator-Dev,developer\nAWS-EKS-Privileged-Administrator-Prod,infrastructure\nTestingg97379,developer")
     #groups = csvdecode(file("/runner/_work/terraspace-infra/terraspace-infra/csvs/AzureCSVs/groups.csv"))
     existing_groups = csvdecode(file(var.existing_groups_file_path))
     managers = csvdecode(file(var.managers_file_path))
